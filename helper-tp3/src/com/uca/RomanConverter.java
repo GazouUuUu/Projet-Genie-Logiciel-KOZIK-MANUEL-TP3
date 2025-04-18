@@ -1,6 +1,6 @@
 package com.uca;
 
-
+import java.lang.IllegalArgumentException;
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -30,6 +30,9 @@ public class RomanConverter{
 
 
 	public static String getRomanFromNumber(int a) throws IllegalArgumentException{
+		if(a<0 || a>3999){
+			throw new IllegalArgumentException("Valeur négative(gros naze t'as cru on aller mettre un - devant les lettres t'es con ma parole ils connaissaient meme pas les nombres négatifs a l'époque ils pensaient encore que la terre était plate réfléchis un peu");
+		}
 		String resultat = "";
 		for(RomanNumber n : SYMBOLS){
 			while(a >= n.getValue()){
@@ -41,6 +44,12 @@ public class RomanConverter{
 	}
 	
 	public static int getNumberFromRoman(String a) throws IllegalArgumentException{
+		if(a==null || !VALIDATION_RE.matcher(a).matches()){
+			throw new IllegalArgumentException("Valeur non valide");
+		}
+		if(a.length() == 0){
+			return 0;
+		}
 		int resultat = 0;
 		int index = 0;
 		for(RomanNumber n : SYMBOLS){
