@@ -1,6 +1,6 @@
 package com.uca;
 
-public class RomanNumber extends Number{
+public class RomanNumber extends Number implements Comparable<Number>{
 	
 	private String roman;
 	
@@ -50,8 +50,7 @@ public class RomanNumber extends Number{
 	*/
 	@Override
 	public double doubleValue() {
-		// TODO
-		return 0;
+		return (double)this.value;
 	}
 
 	/**
@@ -59,8 +58,7 @@ public class RomanNumber extends Number{
 	*/
 	@Override
 	public float floatValue() {
-		// TODO
-		return 0;
+		return (float)this.value;
 	}
 
 	/**
@@ -68,8 +66,7 @@ public class RomanNumber extends Number{
 	*/
 	@Override
 	public int intValue() {
-		// TODO
-		return 0;
+		return this.value;
 	}
 
 	/**
@@ -77,12 +74,15 @@ public class RomanNumber extends Number{
 	*/
 	@Override
 	public long longValue() {
-		// TODO
-		return 0;
+		return (long)this.value;
 	}
 
 	@Override
 	public String toString() {
-		return ""+this.value;
+		return this.roman + " (" + this.value + ")";
+	}
+	@Override
+	public int compareTo(Number o){
+		return Integer.compare(this.value, o.intValue());
 	}
 }
