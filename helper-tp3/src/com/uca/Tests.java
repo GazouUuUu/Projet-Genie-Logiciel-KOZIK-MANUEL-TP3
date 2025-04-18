@@ -24,7 +24,7 @@ public class Tests {
         assertThat(RomanConverter.getNumberFromRoman("I"), equalTo(1));
         assertThat(RomanConverter.getNumberFromRoman("IV"), equalTo(4));
         assertThat(RomanConverter.getNumberFromRoman("IX"), equalTo(9));
-        assertThat(RomanConverter.getNumberFromRoman("IL"), equalTo(49));
+        assertThat(RomanConverter.getNumberFromRoman("XLIX"), equalTo(49));
         assertThat(RomanConverter.getNumberFromRoman("XC"), equalTo(90));
         assertThat(RomanConverter.getNumberFromRoman("CMII"), equalTo(902));
         assertThat(RomanConverter.getNumberFromRoman("MMVI"), equalTo(2006));

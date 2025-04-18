@@ -83,7 +83,6 @@ public class RomanNumber extends Number{
 
 	@Override
 	public String toString() {
-		//TODO
-		return "";
+		return ""+this.value;
 	}
 }
