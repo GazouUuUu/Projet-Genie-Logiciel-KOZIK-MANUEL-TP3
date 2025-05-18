@@ -54,11 +54,19 @@ public class Tests {
     @Test
     public void testRepetition(){
         assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("IIII")), instanceOf(IllegalArgumentException.class));
-        assertThat(exceptionOf(()->RomanConverter.getNumberFromRoman("VV")), instanceOf(IllegalArgumentException.class));
-        assertThat(exceptionOf(()->RomanConverter.getNumberFromRoman("XXXX")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("VV")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("XXXX")), instanceOf(IllegalArgumentException.class));
     }
 
+    @Test
+    public void testAntecedentInvalide(){
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("IVIX")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("IVX")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("VIV")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("IVI")), instanceOf(IllegalArgumentException.class));
+        assertThat(exceptionOf(()-> RomanConverter.getNumberFromRoman("CDCD")), instanceOf(IllegalArgumentException.class));
 
+    }
 
     
 

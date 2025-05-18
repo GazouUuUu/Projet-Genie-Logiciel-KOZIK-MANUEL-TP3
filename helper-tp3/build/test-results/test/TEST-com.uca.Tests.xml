@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.uca.Tests" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-18T07:39:52" hostname="axelmanuel" time="0.041">
+<testsuite name="com.uca.Tests" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-18T07:55:48" hostname="axelmanuel" time="0.039">
   <properties/>
-  <testcase name="testRepetition()" classname="com.uca.Tests" time="0.016"/>
-  <testcase name="testRomanFromNumber()" classname="com.uca.Tests" time="0.002"/>
-  <testcase name="testNegativeValue()" classname="com.uca.Tests" time="0.002"/>
+  <testcase name="testAntecedentInvalide()" classname="com.uca.Tests" time="0.015"/>
+  <testcase name="testRepetition()" classname="com.uca.Tests" time="0.002"/>
+  <testcase name="testRomanFromNumber()" classname="com.uca.Tests" time="0.001"/>
+  <testcase name="testNegativeValue()" classname="com.uca.Tests" time="0.001"/>
   <testcase name="testNumberFromRoman()" classname="com.uca.Tests" time="0.001"/>
   <testcase name="testIntervalle()" classname="com.uca.Tests" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
